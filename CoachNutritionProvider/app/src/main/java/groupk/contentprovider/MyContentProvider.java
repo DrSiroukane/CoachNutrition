@@ -13,6 +13,11 @@ import android.util.Log;
 import database.Base;
 
 /**
+ * Group K
+ * 
+ * @author Slimane SIROUKANE
+ * @author Fatima CHIKH
+ * 
  * Content Provider of Base (Coach-Nutrition App)
  */
 public class MyContentProvider extends ContentProvider {

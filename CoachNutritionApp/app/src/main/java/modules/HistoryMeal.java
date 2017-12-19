@@ -1,6 +1,11 @@
 package modules;
 
 /**
+ * Group K
+ * 
+ * @author Slimane SIROUKANE
+ * @author Fatima CHIKH
+ * 
  * History_Meal Module Class ==> Work with Pivot table between History and Meal "History Meal Table"
  */
 public class HistoryMeal {

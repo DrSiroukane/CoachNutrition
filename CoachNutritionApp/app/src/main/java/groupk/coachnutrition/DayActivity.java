@@ -19,6 +19,11 @@ import modules.History;
 import intermediatecontentprovider.IntermediateCoachNutrition;
 
 /**
+ * Group K
+ * 
+ * @author Slimane SIROUKANE
+ * @author Fatima CHIKH
+ * 
  * Day Activity that controls all different Day History tasks
  */
 public class DayActivity extends AppCompatActivity{
@@ -162,30 +167,33 @@ public class DayActivity extends AppCompatActivity{
             float max = Float.parseFloat(((TextView) pop_view.findViewById(R.id.et_max_obj)).getText().toString());
 
             if((0 < min) && (0 < max)){
-                //Check if there is a change Yes or No
-                if(h.getMin() != min || h.getMax() != max){ // update min and max in day_date if it get changed
-                    h.setMin(min);
-                    h.setMax(max);
-                    Log.d("The_New_Values_Of","min="+h.getMin()+"max="+h.getMax());
+                if(min < max) {
+                    //Check if there is a change Yes or No
+                    if (h.getMin() != min || h.getMax() != max) { // update min and max in day_date if it get changed
+                        h.setMin(min);
+                        h.setMax(max);
+                        Log.d("The_New_Values_Of", "min=" + h.getMin() + "max=" + h.getMax());
 
-                    //Update the new values of min & max in TABLE_HISTORY
-                    inter.updateHitory(h);
+                        //Update the new values of min & max in TABLE_HISTORY
+                        inter.updateHitory(h);
 
-                    //new Values of day_min and day_max
-                    day_min = h.getMin();//History min of day_date
-                    day_max = h.getMax();//History Max of day_date
-                    Log.d("DayActivity : date" + day_date_d, ", min " + day_min + ", max " + day_max);
+                        //new Values of day_min and day_max
+                        day_min = h.getMin();//History min of day_date
+                        day_max = h.getMax();//History Max of day_date
+                        Log.d("DayActivity : date" + day_date_d, ", min " + day_min + ", max " + day_max);
+                    }
+                    Log.i("min max", "min: " + h.getMin() + " max: " + h.getMax());
+                    dialog.cancel();
+                }else{
+                    IntermediateCoachNutrition.notification(this, "Please, Max should be great then Min", 1);
                 }
-                Log.i("min max", "min: " + h.getMin() + " max: " + h.getMax());
             }else{
-                IntermediateCoachNutrition.notification(this, "Please, Min and MAx values should be great then 0", 0);
+                IntermediateCoachNutrition.notification(this, "Please, Min and Max values should be great then 0", 0);
             }
         }catch (NumberFormatException e){
             Log.d("Objectif_min&max", "Erreur", e);
             IntermediateCoachNutrition.notification(this, "Please, Min and Max values should be float !!", 0);
         }
-
-        dialog.cancel();
     }
 
     /**

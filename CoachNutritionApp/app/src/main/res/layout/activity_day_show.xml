@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="groupk.coachnutrition.DayMealActivity">
+    tools:context="groupk.coachnutrition.DayMealActivity"
+    android:background="@drawable/app_background" >
 
     <ScrollView
         android:layout_width="match_parent"
@@ -37,7 +38,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="0000-00-00" />
+                    android:text="@string/empty_date" />
 
             </LinearLayout>
 
@@ -53,7 +54,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.2"
-                    android:text="@string/objectif"
+                    android:text="@string/objective"
                     android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
                 <LinearLayout
@@ -75,7 +76,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="0" />
+                        android:text="@string/_0" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -97,7 +98,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="0" />
+                        android:text="@string/_0" />
 
                 </LinearLayout>
 
@@ -130,7 +131,7 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="numberDecimal"
-                    android:text="1.0"
+                    android:text="@string/_1_0"
                     android:textAlignment="center" />
 
             </LinearLayout>
@@ -147,16 +148,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/update"
-                    android:onClick="dayMealOnClick"/>
+                    android:text="@string/update"/>
 
                 <Button
                     android:id="@+id/b_delete_day_meal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/delete"
-                    android:onClick="dayMealOnClick"/>
+                    android:text="@string/delete" />
             </LinearLayout>
 
             <LinearLayout
@@ -180,7 +179,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="0"
+                    android:text="@string/_0"
                     android:textAppearance="@style/TextAppearance.AppCompat" />
             </LinearLayout>
         </LinearLayout>

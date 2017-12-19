@@ -5,6 +5,11 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
+ * Group K
+ * 
+ * @author Slimane SIROUKANE
+ * @author Fatima CHIKH
+ * 
  * History Module Class ==> Work with "History Table"
  */
 public class History {

@@ -6,6 +6,11 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 /**
+ * Group K
+ * 
+ * @author Slimane SIROUKANE
+ * @author Fatima CHIKH
+ * 
  * Base of Coach-Nutrition App
  */
 public class Base extends SQLiteOpenHelper {

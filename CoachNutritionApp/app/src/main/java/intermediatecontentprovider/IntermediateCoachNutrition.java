@@ -106,7 +106,7 @@ public class IntermediateCoachNutrition {
      * 
      * @param hm
      */
-    public void insertLineHistorisationMeal(HistoryMeal hm) {
+    public void insertLineHistoryMeal(HistoryMeal hm) {
         try {
             ContentValues row = new ContentValues();
             row.put(COL_ID_MEAL, hm.getIdMeal());

@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="groupk.coachnutrition.DayMealActivity">
+    tools:context="groupk.coachnutrition.DayMealActivity"
+    android:background="@drawable/app_background" >
 
     <ScrollView
         android:layout_width="match_parent"
@@ -37,7 +38,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="0000-00-00" />
+                    android:text="@string/empty_date" />
 
             </LinearLayout>
 
@@ -84,7 +85,7 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="numberDecimal"
-                    android:text="1.0"
+                    android:text="@string/_1_0"
                     android:textAlignment="center" />
 
             </LinearLayout>

@@ -15,6 +15,11 @@ import modules.History;
 import intermediatecontentprovider.IntermediateCoachNutrition;
 
 /**
+ * Group K
+ * 
+ * @author Slimane SIROUKANE
+ * @author Fatima CHIKH
+ * 
  * Fragment that help user to pick a date
  */
 public class DatePickerFragment extends DialogFragment implements DatePickerDialog.OnDateSetListener {

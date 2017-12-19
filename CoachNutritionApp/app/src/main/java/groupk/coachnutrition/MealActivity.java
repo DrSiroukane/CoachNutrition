@@ -3,6 +3,7 @@ package groupk.coachnutrition;
 import android.annotation.SuppressLint;
 import android.app.LoaderManager;
 import android.content.CursorLoader;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.Loader;
 import android.database.Cursor;
@@ -23,10 +24,15 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
-import modules.Meal;
 import intermediatecontentprovider.IntermediateCoachNutrition;
+import modules.Meal;
 
 /**
+ * Group K
+ * 
+ * @author Slimane SIROUKANE
+ * @author Fatima CHIKH
+ * 
  * Meal Activity that handle different tasks of Meal
  */
 public class MealActivity extends AppCompatActivity implements View.OnClickListener,LoaderManager.LoaderCallbacks<Cursor> {
@@ -38,6 +44,7 @@ public class MealActivity extends AppCompatActivity implements View.OnClickListe
     public Meal m;
     Button b_update_meal;
     Button b_delete_meal;
+    boolean submit_delete = false;
     private LoaderManager manager;
     private static final int READ_REQUEST_CODE = 42;
 
@@ -232,9 +239,33 @@ public class MealActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.b_delete_meal:
                 Log.d("delete_meal", "button get clicked");
-                IntermediateCoachNutrition inter=new IntermediateCoachNutrition(this);
-                inter.deleteMeal((int) id);
-                Log.d("delete_meal", "delete meal selected " + id);
+                DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        switch (which){
+                            case DialogInterface.BUTTON_POSITIVE:
+                                submit_delete = true;
+                                break;
+
+                            case DialogInterface.BUTTON_NEGATIVE:
+                                submit_delete = false;
+                                break;
+                        }
+                    }
+                };
+
+                AlertDialog.Builder builder2 = new AlertDialog.Builder(this);
+                builder2.setMessage("Are you sure you want to delete this?")
+                        .setPositiveButton("Yes", dialogClickListener)
+                        .setNegativeButton("No", dialogClickListener)
+                        .show();
+
+                if(submit_delete){
+                    IntermediateCoachNutrition inter = new IntermediateCoachNutrition(this);
+                    inter.deleteMeal((int) id);
+                    Log.d("delete_meal", "delete meal selected " + id);
+                }
+
                 break;
 
             case R.id.b_upload_meal:

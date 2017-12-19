@@ -24,6 +24,11 @@ import intermediatecontentprovider.IntermediateCoachNutrition;
 import modules.History;
 
 /**
+ * Group K
+ * 
+ * @author Slimane SIROUKANE
+ * @author Fatima CHIKH
+ * 
  * Main Activity HealthCheck
  */
 public class HealthCheckActivity extends AppCompatActivity

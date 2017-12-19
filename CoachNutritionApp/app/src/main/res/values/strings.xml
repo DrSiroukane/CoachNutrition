@@ -15,8 +15,23 @@
     <string name="delete">Delete</string>
     <string name="update">Update</string>
     <string name="day_meals">Day Meals</string>
-    <string name="objectif">Objectif</string>
+    <string name="objective">Objectif</string>
     <string name="add">Add</string>
     <string name="quantity">Quantity</string>
     <string name="_0">0</string>
+    <string name="empty_date">0000-00-00</string>
+    <string name="day">Day</string>
+    <string name="day_show">Day Show</string>
+    <string name="graph">Graph</string>
+    <string name="_1_0">1.0</string>
+    <string name="calories">Calories</string>
+    <string name="mark">Mark</string>
+    <string name="week">Week</string>
+    <string name="meal">Meal</string>
+    <string name="upload">Upload</string>
+    <string name="id">Id</string>
+    <string name="name">Name</string>
+    <string name="submit">Submit</string>
+    <string name="user_name">User Name</string>
+    <string name="user_email_com">user@email.com</string>
 </resources>

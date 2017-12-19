@@ -16,7 +16,7 @@
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Id" />
+            android:text="@string/id" />
 
         <EditText
             android:id="@+id/et_meal_id"
@@ -39,7 +39,7 @@
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Nom" />
+            android:text="@string/name" />
 
         <EditText
             android:id="@+id/et_meal_name"
@@ -62,7 +62,7 @@
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Calories" />
+            android:text="@string/calories" />
 
         <EditText
             android:id="@+id/et_meal_cal"
@@ -80,7 +80,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="140dp"
         android:onClick="submitMeal"
-        android:text="Valider"
+        android:text="@string/submit"
         app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

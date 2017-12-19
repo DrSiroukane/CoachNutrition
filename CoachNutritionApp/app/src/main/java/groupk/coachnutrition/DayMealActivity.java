@@ -21,6 +21,11 @@ import modules.HistoryMeal;
 import modules.Meal;
 
 /**
+ * Group K
+ * 
+ * @author Slimane SIROUKANE
+ * @author Fatima CHIKH
+ * 
  * Day Meal Activity that handle adding Meal to Pivot table for selected History on Day Activity
  */
 public class DayMealActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor>{
@@ -100,27 +105,23 @@ public class DayMealActivity extends AppCompatActivity implements LoaderManager.
         String quantity_s = ((EditText) findViewById(R.id.et_day_meal_quantity)).getText().toString();
         if(!quantity_s.isEmpty()){
             // new meal and its quantity with history(day_date)
-            try{
-                float quantity = Float.parseFloat(quantity_s);
-                Log.d("addDayMeal","quantity " + quantity);
-                hm=new HistoryMeal(m.getId(),h.getId(),quantity,(calorie*quantity));
-                Log.d("HistoryMeal","_idm " + hm.getIdMeal() + "_idH " + hm.getIdHistory() + "_TCalories " + hm.getTotalCaloriesHM());
-                if(hm!=null){
-                    Log.d("addDayMeal","HistoryMeal " + hm);
-                    //insert in TABLE_HISTORYMEALS
-                    inter.insertLineHistorisationMeal(hm);
-                    //set the new values of TotalCalories H
-                    if(h!=null){
-                        //insert new values of total calories all meals of the day in TABLE History
-                        Log.d("addDayMeal","totalcaloriesH" + h.getTotalCal());
-                        h.setTotalCal(h.getTotalCal() + hm.getTotalCaloriesHM());
-                        Log.d("addMeal","update_caloriesH " + h.getTotalCal());
-                        inter.updateHitory(h);
-                        Log.d("addMeal","updateTCaloriesH " + h.getTotalCal());
-                    }
+            float quantity = Float.parseFloat(quantity_s);
+            Log.d("addDayMeal","quantity " + quantity);
+            hm=new HistoryMeal(m.getId(),h.getId(),quantity,(calorie*quantity));
+            Log.d("HistoryMeal","_idm " + hm.getIdMeal() + "_idH " + hm.getIdHistory() + "_TCalories " + hm.getTotalCaloriesHM());
+            if(hm!=null){
+                Log.d("addDayMeal","HistoryMeal " + hm);
+                //insert in TABLE_HISTORYMEALS
+                inter.insertLineHistoryMeal(hm);
+                //set the new values of TotalCalories H
+                if(h!=null){
+                    //insert new values of total calories all meals of the day in TABLE History
+                    Log.d("addDayMeal","totalcaloriesH" + h.getTotalCal());
+                    h.setTotalCal(h.getTotalCal() + hm.getTotalCaloriesHM());
+                    Log.d("addMeal","update_caloriesH " + h.getTotalCal());
+                    inter.updateHitory(h);
+                    Log.d("addMeal","updateTCaloriesH " + h.getTotalCal());
                 }
-            }catch( NumberFormatException e){
-                IntermediateCoachNutrition.notification(this, "Please, be sure that you insert number !!", 1);
             }
         }else{
             IntermediateCoachNutrition.notification(this, "Please, insert a quantity", 1);

@@ -5,16 +5,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="groupk.coachnutrition.DayActivity">
+    tools:context="groupk.coachnutrition.DayActivity"
+    android:background="@drawable/app_background" >
 
 
     <TextView
         style="@style/TextViewStyle2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/date"
-
-        />
+        android:text="@string/date"  />
 
     <EditText
         android:id="@+id/et_day_date"
@@ -23,7 +22,7 @@
         android:layout_marginTop="50dp"
         android:ems="10"
         android:editable="false"
-        android:text="0000-00-00"
+        android:text="@string/empty_date"
         android:textAlignment="center"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -34,7 +33,7 @@
         android:layout_marginTop="100dp"
         android:onClick="dayOnClick"
         android:enabled="false"
-        android:text="Objectif"
+        android:text="@string/objective"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
@@ -44,7 +43,7 @@
         android:layout_marginTop="150dp"
         android:onClick="dayOnClick"
         android:enabled="false"
-        android:text="Day Meals"
+        android:text="@string/day_meals"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
@@ -54,7 +53,7 @@
         android:layout_marginTop="200dp"
         android:onClick="dayOnClick"
         android:enabled="false"
-        android:text="Day"
+        android:text="@string/day_show"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
@@ -64,7 +63,7 @@
         android:layout_marginTop="250dp"
         android:onClick="dayOnClick"
         android:enabled="false"
-        android:text="Graph"
+        android:text="@string/graph"
         app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

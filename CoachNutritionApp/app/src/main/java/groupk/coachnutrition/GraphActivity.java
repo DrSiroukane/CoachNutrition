@@ -25,6 +25,11 @@ import modules.History;
 import intermediatecontentprovider.IntermediateCoachNutrition;
 
 /**
+ * Group K
+ * 
+ * @author Slimane SIROUKANE
+ * @author Fatima CHIKH
+ * 
  * Graph Activity to display different plots of (Min, Max, TotalCalories) in a Week or less
  */
 public class GraphActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor>{

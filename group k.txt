@@ -1,0 +1,10 @@
+Group K
+
+We create two Apps:
+CoachNutrition: {
+	Which has only controls function
+}
+
+CoachNutritionProvider: {
+	Which has database and its content provider
+}

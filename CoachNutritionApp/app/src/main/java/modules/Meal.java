@@ -1,6 +1,11 @@
 package modules;
 
 /**
+ * Group K
+ * 
+ * @author Slimane SIROUKANE
+ * @author Fatima CHIKH
+ * 
  * Meal Module Class ==> Work with "Meal Table"
  */
 public class Meal {

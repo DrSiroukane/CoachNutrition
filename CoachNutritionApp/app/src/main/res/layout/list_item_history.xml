@@ -15,7 +15,7 @@
             style="@style/TextViewStyle1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="0000-00-00" />
+            android:text="@string/empty_date" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -36,7 +36,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="0" />
+                android:text="@string/_0" />
 
             <TextView
                 style="@style/TextViewStyle1"
@@ -66,7 +66,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.25"
-                android:text="Calories" />
+                android:text="@string/calories" />
 
             <TextView
                 android:id="@+id/tv_item_total_cal"
@@ -74,14 +74,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.25"
-                android:text="0" />
+                android:text="@string/_0" />
 
             <TextView
                 style="@style/TextViewStyle1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.25"
-                android:text="Mark" />
+                android:text="@string/mark" />
 
             <TextView
                 android:id="@+id/tv_item_mark"
@@ -89,7 +89,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.25"
-                android:text="0" />
+                android:text="@string/_0" />
 
         </LinearLayout>
     </LinearLayout>

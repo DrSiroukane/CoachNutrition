@@ -1,0 +1,66 @@
+
+## Classes and XMLs : {
+HealthCheckActivity (MainActivity) : {activity_health_check, app_bar_health_check, nav_header_health_check},
+	DayActivity (Menu Option) : {activity_day}.
+		DatePickerFragment,
+		Objectif {objectif},
+		DayMealActivity : {activity_day_meal},
+		DayShowActivity : {activity_day_show},
+
+	MealActivity (Menu Option) : {activity_meal}
+		Add, Delete {meal_data}
+}
+#############
+
+## Buttons instructions
+button click objectif with database : {
+	At beginning {
+		get last date data and put them in day part
+		get 7 last date data info and put them in week part
+	}
+
+	Day option on menu: { nothing to do }
+		PickDate : { 
+			if date exist in data base 
+				get its History
+			else
+				create a new History with last (min max from database)
+		}
+
+		Objectif : {
+			Validate : {
+				update min max if they get changed
+			}
+		}
+
+		Day Meal : {
+			get all meals for spinner
+
+			Add : {
+				add meal on selected day if quantity is different then 0
+			}
+		}
+
+		Day : {
+			get day History with all related meals
+
+			Update : {
+				if quantity of selected meal change 
+					update quantity of meal on database
+					update total calories
+			}
+
+			Delete : {
+				delete meal connection with history from database
+				update total calories
+			}
+		}
+
+	Meals option on menu: { get all existing meals and put them in spinner}
+		Add button : { nothing to do }
+			Validate : { insert a new meal to database and reload spinner }
+		Update button : { put meal data on feilds of meal_data.xml view }
+			Validate : { update a meal info in database and reload spinner }
+		Delete button : { delete selected meal and reload spinner }
+}
+#############
